@@ -1,0 +1,57 @@
+---
+const {
+  label,
+  name,
+  placeholder,
+  required = false,
+  value,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const fieldId = htmlAttributes.id || `textarea-${crypto.randomUUID()}`;
+---
+
+<div class:list={["textarea", className]}>
+  {
+    label && (
+      <label for={fieldId} class="label">
+        {label}
+        {required && (
+          <span class="required" aria-label="required">
+            *
+          </span>
+        )}
+      </label>
+    )
+  }
+  <textarea
+    name={name}
+    id={fieldId}
+    placeholder={placeholder}
+    required={required}
+    aria-required={required}
+    class="field"
+    {...htmlAttributes}>{value}</textarea
+  >
+</div>
+
+<style lang="pcss">
+  .textarea {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: 100%;
+    margin: 0;
+    margin-bottom: var(--spacing-md);
+
+    .required {
+      color: red;
+      margin-inline-end: var(--spacing-em-xs);
+    }
+  }
+</style>

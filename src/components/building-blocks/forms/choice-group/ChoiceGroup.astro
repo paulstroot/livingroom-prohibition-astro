@@ -1,0 +1,85 @@
+---
+const {
+  name,
+  options = [],
+  title,
+  orientation = "vertical",
+  required = false,
+  multiple = false,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const inputType = multiple ? "checkbox" : "radio";
+const inputName = multiple ? `${name}[]` : name;
+---
+
+<fieldset
+  class:list={["choice-group", `orientation-${orientation}`, multiple && "multiple", className]}
+  role={multiple ? "group" : "radiogroup"}
+  {...htmlAttributes}
+>
+  {
+    title && (
+      <legend class="legend">
+        {title}
+        {required && (
+          <span class="required" aria-label="required">
+            *
+          </span>
+        )}
+      </legend>
+    )
+  }
+  <div class="options">
+    {
+      options.map((option, index) => (
+        <label class="option">
+          <input
+            type={inputType}
+            name={inputName}
+            value={option.value}
+            checked={option.checked || false}
+            required={required && index === 0}
+            aria-required={required && index === 0}
+            class="field"
+          />
+          <span class="label-text">{option.label}</span>
+        </label>
+      ))
+    }
+  </div>
+</fieldset>
+
+<style lang="pcss">
+  .choice-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin: 0;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    width: 100%;
+
+    .required {
+      color: red;
+      margin-inline-end: var(--spacing-em-xs);
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    &.orientation-horizontal .options {
+      display: grid;
+      gap: var(--spacing-sm);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+</style>

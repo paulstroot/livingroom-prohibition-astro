@@ -1,0 +1,27 @@
+---
+import RenderBlock from "@components/utils/renderBlock.astro";
+
+const { action, formBlocks = [], class: className, ...rest } = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<form
+  class:list={["form", className]}
+  action={action}
+  method="post"
+  enctype="multipart/form-data"
+  {...htmlAttributes}
+>
+  <RenderBlock contentSections={formBlocks} propName="formBlocks" />
+  <slot />
+</form>
+
+<style lang="pcss">
+  .form {
+    margin-top: var(--spacing-lg);
+    width: 100%;
+  }
+</style>

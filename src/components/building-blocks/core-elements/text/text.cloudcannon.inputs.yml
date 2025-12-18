@@ -1,0 +1,24 @@
+text:
+  comment: The content for the text component (Markdown format). Leave empty to use slot content instead.
+  type: markdown
+  options:
+    blockquote: false
+    bold: true
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+alignX:
+  type: select
+  options:
+    values:
+      - id: start
+        name: Start
+      - id: center
+        name: Center
+      - id: end
+        name: End
+  comment: The horizontal alignment of the text component.
+
