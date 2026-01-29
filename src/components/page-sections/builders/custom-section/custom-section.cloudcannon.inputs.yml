@@ -91,6 +91,8 @@ backgroundColor:
         name: Accent
       - id: highlight
         name: Highlight
+      - id: gradient
+        name: Gradient
 backgroundImage:
   type: object
   comment: Background image configuration for the custom section.
@@ -140,4 +142,3 @@ backgroundImage.positionHorizontal:
 rounded:
   type: switch
   comment: Whether to apply rounded corners to the custom section.
-
