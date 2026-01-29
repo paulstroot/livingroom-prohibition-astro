@@ -48,6 +48,13 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: Blue Gradient
     contentSections:
+      - _component: building-blocks/core-elements/heading
+        text: Point that Speaks to Both
+        level: h3
+        size: default
+        alignX: center
+        iconName:
+        iconPosition: before
       - _component: building-blocks/core-elements/text
         text: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -75,6 +82,20 @@ pageSections:
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         alignX: center
+    maxContentWidth: lg
+    paddingHorizontal: lg
+    paddingVertical: 3xl
+    colorScheme: contrast
+    backgroundColor: accent
+    backgroundImage:
+      source: ''
+      alt: ''
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/builders/custom-section
+    label: Blue Background
+    contentSections:
       - _component: building-blocks/wrappers/split
         label: Split content
         firstColumnContentSections:
@@ -141,11 +162,11 @@ pageSections:
         alignX: center
         iconName:
         iconPosition: before
-    maxContentWidth: lg
-    paddingHorizontal: lg
-    paddingVertical: 3xl
-    colorScheme: contrast
-    backgroundColor: accent
+    maxContentWidth: 2xl
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme:
+    backgroundColor: highlight
     backgroundImage:
       source: ''
       alt: ''
