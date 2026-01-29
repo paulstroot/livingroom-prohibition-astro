@@ -1,10 +1,10 @@
 {
-  "name": "astro-component-starter",
+  "name": "parasole-livingroom-astro",
   "type": "module",
   "version": "1.0.0",
   "description": "A modern design system built with Astro, featuring design tokens, components, and comprehensive documentation",
   "keywords": ["design-system", "astro", "components", "css", "design-tokens"],
-  "author": "Your Name",
+  "author": "Paul Stroot",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
