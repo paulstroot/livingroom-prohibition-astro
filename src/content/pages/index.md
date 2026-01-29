@@ -1,164 +1,173 @@
 ---
 _schema: default
-title: Astro Component Starter
+title: Home Page
 pageSections:
-  - _component: page-sections/heroes/hero-center
-    eyebrow:
-    heading: The Astro Component Starter for building any site
-    subtext: >-
-      Built on web fundamentals. Easy to customize, fast to use, and simple to
-      maintain.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Explore Components
-        link: /component-library/
-        iconName: ''
-        iconPosition: before
-        hideText: false
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: View in GitHub
-        link: https://github.com/CloudCannon/astro-component-starter
-        iconName: ''
-        iconPosition: before
-        hideText: false
-        variant: secondary
-        size: md
-    colorScheme: default
+  - _component: page-sections/builders/custom-section
+    label: Custom Hero Section
+    contentSections:
+      - _component: building-blocks/core-elements/spacer
+        size: 3xl
+      - _component: building-blocks/wrappers/split
+        label: Inner Logos
+        firstColumnContentSections:
+          - _component: building-blocks/core-elements/heading
+            text: The Living Room
+            level: h2
+            size: default
+            alignX: end
+            iconName:
+            iconPosition: before
+        secondColumnContentSections:
+          - _component: building-blocks/core-elements/heading
+            text: Prohibition
+            level: h2
+            size: default
+            alignX: start
+            iconName:
+            iconPosition: before
+        distributionMode: half
+        fixedWidth: 0
+        minSplitWidth: 760
+        verticalAlignment: center
+        reverse: false
+        reverseOrderOnMobile: false
+        gap: 3xl
+      - _component: building-blocks/core-elements/spacer
+        size: 3xl
+    maxContentWidth: 2xl
+    paddingHorizontal: 3xl
+    paddingVertical: 3xl
+    colorScheme: contrast
     backgroundColor: base
-  - _component: page-sections/features/feature-split
-    eyebrow: Built for Astro
-    heading: Fast, modern, and easy to work with
-    subtext: >-
-      The Component Starter takes full advantage of Astro's zero-JS-by-default
-      approach. You get fast pages, simple routing, and a component system that
-      stays easy to use as your site grows.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-feature.svg
-    imageAlt: Website Feature
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/features/feature-split
-    eyebrow: CloudCannon Ready
-    heading: Easy visual editing
-    subtext: >-
-      Every component is built to work seamlessly in CloudCannon's Visual
-      Editor. Developers can create and style custom Page Sections with Astro.
-      Editors can click, change, and rearrange content right on the page without
-      touching the code or guessing where anything lives.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-split.svg
-    imageAlt: Website Split
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme:
-    backgroundColor:
-    paddingVertical: lg
-  - _component: page-sections/features/feature-split
-    eyebrow: Performance
-    heading: Fast by architecture, not by accident
-    subtext: >-
-      Your components render to static HTML, keeping bundles lean and pages
-      instant. Your users get instant page loads. You get a modern developer
-      experience.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-hero.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/features/feature-split
-    eyebrow: Documentation
-    heading: Every component, clearly documented
-    subtext: >-
-      Each component comes with straightforward docs, real examples, full
-      descriptions of every property, and clear guidance without having to dig
-      through source files.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-documented.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/features/feature-grid
-    eyebrow: Principles
-    heading: Built for real-world web projects
-    subtext: No trends. No noise. Just reliability.
-    gap: xl
-    minItemWidth: 280
-    maxItemWidth: 360
-    features:
-      - _component: page-sections/features/feature-grid/feature-item
-        title: Web fundamentals
-        description: >-
-          Semantic HTML. Lean CSS. JavaScript only when it's needed. The stack
-          is boring by design, and that’s exactly why it works.
-        iconName: cube
-        iconColor: blue
-      - _component: page-sections/features/feature-grid/feature-item
-        title: Built for speed
-        description: >-
-          Static-rendered, minimal payloads, zero waste. Built to be extremely
-          fast from the first byte.
-        iconName: bolt
-        iconColor: yellow
-      - _component: page-sections/features/feature-grid/feature-item
-        title: Everything just fits
-        description: >-
-          Simple, predictable components that play nice together. Build bigger
-          pieces without creating a maintenance mess.
-        iconName: puzzle-piece
-        iconColor: green
-      - _component: page-sections/features/feature-grid/feature-item
-        title: Controlled editing
-        description: >-
-          Enough freedom for editors to move fast. Enough structure for
-          developers to sleep at night.
-        iconName: pencil
-        iconColor: purple
-      - _component: page-sections/features/feature-grid/feature-item
-        title: Adaptable
-        description: >-
-          Purposefully plain styling. The whole component starter adapts to your
-          designs without a fight.
-        iconName: paint-brush
-        iconColor: pink
-    colorScheme: default
-    backgroundColor: surface
-    align: center
-  - _component: page-sections/ctas/cta-center
-    heading: Ready to start building?
-    subtext: >-
-      Browse the complete Astro Component Starter and see live examples of every
-      component in action. All components are ready to use in CloudCannon and
-      are fully customizable.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Explore Components
-        link: /component-library/
-        iconName: ''
+    backgroundImage:
+      source: https://images.pexels.com/photos/5490965/pexels-photo-5490965.jpeg
+      alt: ''
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/builders/custom-section
+    label: Blue Gradient
+    contentSections:
+      - _component: building-blocks/core-elements/text
+        text: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        alignX: center
+      - _component: building-blocks/core-elements/heading
+        text: Second Point that Speaks to Both
+        level: h3
+        size: default
+        alignX: center
+        iconName:
         iconPosition: before
-        hideText: false
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: View in GitHub
-        link: https://github.com/CloudCannon/astro-component-starter
-        iconName: ''
+      - _component: building-blocks/core-elements/text
+        text: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        alignX: center
+      - _component: building-blocks/wrappers/split
+        label: Split content
+        firstColumnContentSections:
+          - _component: building-blocks/core-elements/heading
+            text: The Living Room
+            level: h2
+            size: default
+            alignX: start
+            iconName:
+            iconPosition: before
+          - _component: building-blocks/core-elements/heading
+            text: Where Minneapolis Comes to Play
+            level: h3
+            size: default
+            alignX: start
+            iconName:
+            iconPosition: before
+          - _component: building-blocks/core-elements/text
+            text: >-
+              Mingle, flirt, sip and savor in a modern playground that
+              epitimizes minneapolis cool. Lorem ipsum dolor sit amet,
+              consectetuer adiplicing elit, sed dom.
+            alignX: start
+        secondColumnContentSections:
+          - _component: building-blocks/core-elements/heading
+            text: Prohibition
+            level: h2
+            size: default
+            alignX: start
+            iconName:
+            iconPosition: before
+          - _component: building-blocks/core-elements/heading
+            text: A Speakeasy in the Skyk
+            level: h3
+            size: default
+            alignX: start
+            iconName:
+            iconPosition: before
+          - _component: building-blocks/core-elements/text
+            text: >-
+              Mingle, flirt, sip and savor in a modern playground that
+              epitimizes minneapolis cool. Lorem ipsum dolor sit amet,
+              consectetuer adiplicing elit, sed dom.
+            alignX: start
+        distributionMode: half
+        fixedWidth:
+        minSplitWidth: 500
+        verticalAlignment: top
+        reverse: false
+        reverseOrderOnMobile: false
+        gap: lg
+      - _component: building-blocks/core-elements/testimonial
+        text: >-
+          Here's a quote from somonemet, consectetuer adispilid elit, sed iam
+          dononmojmy ning exuismo ditneic utl .ser
+        authorName:
+        authorDescription:
+        authorImage: ''
+        alignX: center
+      - _component: building-blocks/core-elements/heading
+        text: Gallery Headline here
+        level: h2
+        size: default
+        alignX: center
+        iconName:
         iconPosition: before
-        hideText: false
-        variant: tertiary
-        size: md
+    maxContentWidth: lg
+    paddingHorizontal: lg
+    paddingVertical: 3xl
+    colorScheme: contrast
+    backgroundColor: accent
+    backgroundImage:
+      source: ''
+      alt: ''
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/features/feature-slider
+    slides:
+      - _component: page-sections/features/feature-slider/feature-slider-item
+        eyebrow: Slide 1
+        title: This is the caption for slide 1
+        description: Short description for this slide.
+        imageSource: /src/assets/images/component-library/sunset.jpg
+        imageAlt: Slide image alt text
+        minSplitWidth: 0
+      - _component: page-sections/features/feature-slider/feature-slider-item
+        eyebrow: Slide 2
+        title: And here is another slide
+        description: Short description for this slide.
+        imageSource: https://images.pexels.com/photos/1516418/pexels-photo-1516418.jpeg
+        imageAlt: Slide image alt text
+        minSplitWidth: 0
     colorScheme: contrast
     backgroundColor: surface
-    rounded: false
 ---
