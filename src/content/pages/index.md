@@ -41,7 +41,7 @@ pageSections:
     backgroundColor: base
     backgroundImage:
       source: https://images.pexels.com/photos/5490965/pexels-photo-5490965.jpeg
-      alt: ''
+      alt: ""
       positionVertical: top
       positionHorizontal: center
     rounded: false
@@ -86,10 +86,10 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: 3xl
     colorScheme: contrast
-    backgroundColor: accent
+    backgroundColor: gradient
     backgroundImage:
-      source: ''
-      alt: ''
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
     rounded: false
@@ -153,7 +153,8 @@ pageSections:
           dononmojmy ning exuismo ditneic utl .ser
         authorName:
         authorDescription:
-        authorImage: ''
+        authorImage: ""
+        backgroundColor:
         alignX: center
       - _component: building-blocks/core-elements/heading
         text: Gallery Headline here
@@ -165,11 +166,11 @@ pageSections:
     maxContentWidth: 2xl
     paddingHorizontal: md
     paddingVertical: md
-    colorScheme:
-    backgroundColor: highlight
+    colorScheme: contrast
+    backgroundColor: accent
     backgroundImage:
-      source: ''
-      alt: ''
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
     rounded: false
@@ -190,5 +191,5 @@ pageSections:
         imageAlt: Slide image alt text
         minSplitWidth: 0
     colorScheme: contrast
-    backgroundColor: surface
+    backgroundColor: accent
 ---

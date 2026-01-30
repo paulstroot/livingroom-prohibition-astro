@@ -104,7 +104,7 @@ if (!htmlAttributes.id && label) {
       z-index: var(--layer-1);
       container-type: inline-size;
 
-      > :global(*:not(editable-array-item):first-child), 
+      > :global(*:not(editable-array-item):first-child),
       > :global(editable-array > editable-array-item:first-child) > :global(*:first-child) {
         margin-top: 0 !important;
       }
@@ -287,6 +287,10 @@ if (!htmlAttributes.id && label) {
 
     > .bg-highlight {
       background-color: var(--color-bg-highlight);
+    }
+    > .bg-gradient {
+      background: var(--color-bg-accent);
+      background: linear-gradient(180deg,var(--color-bg) 0%, var(--color-bg-accent) 100%);
     }
   }
 </style>

@@ -9,6 +9,7 @@ const {
   authorImage = "",
   class: className,
   editable = true,
+  backgroundColor,
   "data-prop": customDataProp = "text",
   "data-prop-author-name": customDataPropAuthorName = "authorName",
   "data-prop-author-description": customDataPropAuthorDescription = "authorDescription",
@@ -47,7 +48,15 @@ const authorDescriptionDataAttributes =
     : {};
 ---
 
-<blockquote class:list={["testimonial", `alignment-${alignX}`, className]} {...htmlAttributes}>
+<blockquote
+  class:list={[
+    "testimonial",
+    `alignment-${alignX}`,
+    className,
+    backgroundColor && `bg-${backgroundColor}`,
+  ]}
+  {...htmlAttributes}
+>
   <div class="quote" {...textDataAttributes}>
     <slot>
       {text && <Fragment set:html={MarkdownText} />}
@@ -85,12 +94,12 @@ const authorDescriptionDataAttributes =
 <style lang="pcss">
   .testimonial {
     display: flex;
-    background: var(--color-bg);
+
     flex-direction: column;
     gap: var(--spacing-em-sm);
     margin: 0;
     margin-top: var(--spacing-lg);
-    border: 1px solid var(--color-border);
+    border: none;
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
 
@@ -148,6 +157,22 @@ const authorDescriptionDataAttributes =
           height: 100%;
         }
       }
+    }
+
+    &.bg-base {
+      background-color: var(--color-bg);
+    }
+
+    &.bg-surface {
+      background-color: var(--color-bg-surface);
+    }
+
+    &.bg-accent {
+      background-color: var(--color-bg-accent);
+    }
+
+    &.bg-highlight {
+      background-color: var(--color-bg-highlight);
     }
   }
 </style>

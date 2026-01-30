@@ -26,6 +26,21 @@ authorImage:
     paths:
       uploads: src/assets/images
       static: ""
+backgroundColor:
+  type: select
+  comment: Background color for the CTA.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
 alignX:
   comment: The horizontal alignment of the testimonial.
   type: select
@@ -35,4 +50,3 @@ alignX:
         name: Start
       - id: center
         name: Center
-
